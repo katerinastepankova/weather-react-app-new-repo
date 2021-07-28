@@ -30,7 +30,7 @@ const UseEffectFetch = (initialUrl) => {
 
   console.log(data);
 
-  return { data, isLoading, setUrl };
+  return { data, isLoading, setUrl, error};
 };
 
 export default UseEffectFetch;
