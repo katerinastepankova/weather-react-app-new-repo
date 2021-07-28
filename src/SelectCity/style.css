@@ -1,0 +1,47 @@
+.input {
+  outline: navy;
+  border: 1px solid navy;
+  border-radius: 5px;
+  height: 30px;
+}
+.getweather {
+  background-color: navy;
+  color: oldlace;
+  border-radius: 5px;
+  height: 35px;
+  margin: 20px;
+}
+
+.no-autocomplete {
+  color: navy;
+  padding: 8px;
+  margin: 10px;
+}
+.autocomplete {
+  /*  border: 1px solid navy; */
+  border-radius: 5px;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 20px;
+  max-height: 143px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: calc(300px + 1rem);
+}
+.autocomplete li {
+  padding: 8px;
+}
+.autocomplete > .active,
+.autocomplete li:hover {
+  background-color: #ec6e4c;
+  color: oldlace;
+  cursor: pointer;
+  font-weight: 700;
+}
+.autocomplete li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+.position {
+  display: flex;
+  justify-content: center;
+}

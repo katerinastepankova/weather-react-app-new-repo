@@ -1,0 +1,28 @@
+/* p {color: white}; */
+.row {
+  border: 1px solid silver;
+  border-radius: 8px;
+  margin: 5px;
+  padding: 3px;
+  flex: 1 1 0;
+  background-color: oldlace;
+  color: navy;
+}
+
+.row-header {
+  margin-top: 45px;
+  border: 1px solid silver;
+  border-radius: 8px;
+  background-color: navy;
+  color: oldlace;
+  font-weight: 600;
+}
+.image {
+  background-color: olive;
+}
+.time {
+  background-color: #ec6e4c;
+  color: navy;
+  font-weight: 500;
+  padding: 5px;
+}
