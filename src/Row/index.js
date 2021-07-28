@@ -61,7 +61,7 @@ const Row = ({ dt, temp, description, icon }) => {
         <p>{description}</p>
         <img
           className="image"
-          src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+          src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
           alt="obr"
         ></img>
       </div>
