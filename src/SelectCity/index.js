@@ -10,6 +10,7 @@ const SelectCity = ({ onSearch, suggestions }) => {
   const handleChange = (e) => {
     const city = e.currentTarget.value;
     const newFilteredSuggestions = suggestions.filter((suggestion) =>
+    
       suggestion.name.toLowerCase().startsWith(city.toLowerCase()),
     );
     setActive(0);
@@ -30,7 +31,11 @@ const SelectCity = ({ onSearch, suggestions }) => {
       // Enter key
       setActive(0);
       setIsShow(false);
-      setCity(filtered[active]);
+
+      setCity(`${filtered[active].name}, ${filtered[active].country}`);
+    
+      
+    
     } else if (e.keyCode === 38) {
       // Up arrow
       return active === 0 ? null : setActive(active - 1);
@@ -53,9 +58,11 @@ const SelectCity = ({ onSearch, suggestions }) => {
                 return (
                   <li
                     className={className}
+                  
                     key={suggestion.id}
                     onClick={onClick1}
                   >
+                   
                     {suggestion.name}, {suggestion.country}
                   </li>
                 );

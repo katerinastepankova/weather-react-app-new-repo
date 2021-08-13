@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 
 const UseEffectFetch = (initialUrl) => {
   const [data, setData] = useState(null);
-  // const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
   const [url, setUrl] = useState(initialUrl);
 
   useEffect(() => {
-    // setError(null);
+    setError(null);
     setIsLoading(true);
     setData(null);
 
@@ -16,21 +16,21 @@ const UseEffectFetch = (initialUrl) => {
       .then((data) => {
         setIsLoading(false);
         if (data.cod >= 400) {
-          // setError(data.message);
+          setError(data.message);
           return;
         }
 
         setData(data);
-      })
-      .catch((error) => {
-        setIsLoading(false);
-        // setError(error);
       });
+    // .catch((error) => {
+      setIsLoading(false);
+    //   // setError(error);
+    // });
   }, [url]);
 
   console.log(data);
 
-  return { data, isLoading, setUrl};
+  return { data, isLoading, setUrl, error };
 };
 
 export default UseEffectFetch;

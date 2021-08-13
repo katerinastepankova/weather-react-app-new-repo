@@ -4,8 +4,6 @@ import Row from '../Row';
 import './style.css';
 
 const RowList = ({ weathers }) => {
- 
-
   return (
     <div className="list">
       {weathers.map(({ dt, main, weather }) => (

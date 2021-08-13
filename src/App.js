@@ -8,7 +8,11 @@ import RowList from './RowList';
 import cityList from './data/cityList.json';
 
 const App = () => {
-  const { data, isLoading, setUrl, error } = UseEffectFetch();
+  const { data, isLoading, setUrl, error} = UseEffectFetch();
+
+  console.log(data);
+
+  // const dataPole = ['Ostrava', 'Praha', 'Brno'];
 
   // error handling and loading
   const getContent = () => {
@@ -31,6 +35,8 @@ const App = () => {
         }}
       />
       {getContent()}
+      {/* {data && <RowList weathers={data.list}/>} */}
+    
 
       <Footer />
     </div>
