@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const Row = ({ dt, temp, description, icon }) => {
-  const date = new Date(dt);
+const Row = ({ dt, temp, description, icon, date }) => {
+date = new Date(dt);
 
   return (
     <div className="row-header">
@@ -12,10 +12,12 @@ const Row = ({ dt, temp, description, icon }) => {
           <p> {date.toLocaleDateString()} </p>
         </div>
       )}
+
       {date.getDay(dt) === 2 && (
         <div>
           <p>Úterý </p>
           <p> {date.toLocaleDateString()} </p>
+          
         </div>
       )}
       {date.getDay(dt) === 3 && (
@@ -48,7 +50,8 @@ const Row = ({ dt, temp, description, icon }) => {
           <p> {date.toLocaleDateString()} </p>
         </div>
       )}
-      <div className="row">
+
+<div className="row">
         <p className="time">
           {' '}
           Čas:<br></br> {date.toLocaleTimeString()}

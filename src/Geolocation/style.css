@@ -1,0 +1,41 @@
+.geo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.geoloc{
+  display: flex;
+  justify-content: center;
+}
+button {
+  background-color: navy;
+  color: oldlace;
+  border-radius: 5px;
+  height: 35px;
+  margin-top: 19px;
+ 
+  width: fit-content;
+}
+
+h4{
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 25px;
+}
+h3{
+  color: #ec6e4c;
+  /* border: 1px solid navy;
+  border-radius: 5px; */
+  padding: 5px;
+  margin-bottom: 5px;
+ 
+}
+
+@media screen and (max-width: 600px) { 
+  .geoloc{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ }

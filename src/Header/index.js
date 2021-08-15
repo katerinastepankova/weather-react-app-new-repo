@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <>
       <h1 className="header">
-        Předpověď počasí na dnešek a následujících 5 dní:
+        Předpověď počasí na dnešek a následujících 5 dní
       </h1>
     </>
   );
