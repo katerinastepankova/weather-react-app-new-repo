@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
 
-const Row = ({ dt, temp, description, icon, date }) => {
+const Row = ({ dt, temp, description, icon, date, wind }) => {
 date = new Date(dt);
 
   return (
@@ -67,6 +67,7 @@ date = new Date(dt);
           src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
           alt="obr"
         ></img>
+    <p>Vítr:  <br/> (max) <br/><br/> {wind} km/h  </p>
       </div>
     </div>
   );
