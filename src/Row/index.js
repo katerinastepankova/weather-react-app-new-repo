@@ -1,8 +1,16 @@
 import React from 'react';
 import './style.css';
 
-const Row = ({ dt, temp, description, icon, date, wind }) => {
-date = new Date(dt);
+const Row = ({ dt, temp, description, icon, date, wind, windDir }) => {
+  date = new Date(dt);
+  const windDirection = (num) => {
+    var val = Math.floor((num / 22.5) + 0.5);
+    //var arr = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    var arr = ["S", "SSV", "SV", "VSV", "V", "VJV", "JV", "JJV", "J", "JJZ", "JZ", "ZJZ", "Z", "ZSZ", "SZ", "SSZ"];
+
+    return arr[(val % 16)];
+  };
+
 
   return (
     <div className="row-header">
@@ -17,7 +25,7 @@ date = new Date(dt);
         <div>
           <p>Úterý </p>
           <p> {date.toLocaleDateString()} </p>
-          
+
         </div>
       )}
       {date.getDay(dt) === 3 && (
@@ -51,12 +59,11 @@ date = new Date(dt);
         </div>
       )}
 
-<div className="row">
+      <div className="row">
         <p className="time">
           {' '}
           Čas:<br></br> {date.toLocaleTimeString()}
         </p>
-
         <p>
           Teplota: <br></br>
           {temp}
@@ -67,7 +74,10 @@ date = new Date(dt);
           src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
           alt="obr"
         ></img>
-    <p>Vítr:  <br/> (max) <br/><br/> {wind} km/h  </p>
+        <p>Vítr:  <br /> (max) <br /><br /><span className="wind">{wind} km/h</span>   </p>
+        <p>Směr větru: <br></br>
+          <span className='wind-dir'>{windDirection(windDir)}</span>
+        </p>
       </div>
     </div>
   );
